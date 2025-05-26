@@ -115,7 +115,7 @@
     height: 24px;
     margin-left: 20px;
     cursor: pointer;
-    background-image: url("/logo.png");
+    background-image: url("../logo.png");
     background-repeat: no-repeat;
 }
 
