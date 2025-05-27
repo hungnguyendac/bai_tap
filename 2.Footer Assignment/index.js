@@ -1,4 +1,4 @@
-const menuTitle = document.querySelectorAll(".is_show");
+const menuTitle = document.querySelectorAll(".is_active");
 const menuList = document.querySelectorAll(".menu_list");
 
 menuTitle.forEach((btn, index) => {
