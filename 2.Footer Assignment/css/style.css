@@ -30,7 +30,12 @@
     font-weight: 500;
 }
 
-.footer_left_text p {
+.footer_left_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_left_text span {
     color: #fff;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
@@ -243,8 +248,9 @@
         margin-bottom: 32px;
     }
 
-    .footer_left_text p {
+    .footer_left_text {
         display: inline-block;
+        
     }
 
     .footer_left_text p {
