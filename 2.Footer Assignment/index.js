@@ -1,7 +1,7 @@
-const imgBtn = document.querySelectorAll(".img_btn");
+const menuTitle = document.querySelectorAll(".is_show");
 const menuList = document.querySelectorAll(".menu_list");
 
-imgBtn.forEach((btn, index) => {
+menuTitle.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         const menu = menuList[index];
         if (window.innerWidth <= 600) {

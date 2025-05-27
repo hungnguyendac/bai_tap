@@ -1,75 +1,12 @@
-@font-face {
-    font-family: "Inter";
-    src: url("../font/Inter-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Inter";
-    src: url("../font/Inter-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Inter";
-    src: url("../font/Inter-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url("../font/SpaceGrotesk-Regular.woff") format("woff");
-
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url("../font/SpaceGrotesk-Medium.woff") format("woff");
-
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url("../font/SpaceGrotesk-SemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Regular.woff") format("woff");
-
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Medium.woff") format("woff");
-
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-
-body {
-    background-color: black;
-}
-
 .inner {
-    max-width: 1120px;
+    width: calc(100% - 64px);
+    max-width: min(1120px, 100%);
     margin: 0 auto;
     padding: 40px clamp(16px, 5vw, 32px);
 }
 
 .footer {
+    background-color: black;
 }
 
 /* footer_top */
@@ -81,6 +18,8 @@ body {
 
 /* footer _left */
 .footer_left {
+    padding-top: 33px;
+    width: 53%;
 }
 
 .footer_left .footer_left_title {
@@ -96,23 +35,32 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-weight: 500;
+    line-height: 1.3;
 }
 
 .footer_left_icon {
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 202px;
     margin-top: 20px;
 }
 
 .footer_left_icon .icon {
+    display: inline-block;
     width: 24px;
     height: 24px;
-    margin-right: 20px;
-    background-image: url("/logo.png");
+    margin-right: 25px;
+    background-image: url("../icon.png");
     background-repeat: no-repeat;
     filter: brightness(0) invert(1);
     cursor: pointer;
 }
+
+.footer_left_icon .icon:first-child {
+    margin-left: 0;
+}
+
 
 .icon_instagram {
     background-position: -186px 0;
@@ -136,6 +84,7 @@ body {
 }
 
 .footer_right_menu {
+   
 }
 
 .footer_right_menu .menu_title {
@@ -155,7 +104,6 @@ body {
     display: none;
 }
 
-
 .footer_right_menu .menu_list {
     display: flex;
     flex-direction: column;
@@ -167,12 +115,28 @@ body {
     display: none;
 }
 
-.footer_right_menu .menu_list li {
+.footer_right_menu .menu_list li a {
     color: #fff;
     line-height: 22px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
+}
+
+.footer_right_menu .address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    gap: 24px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.footer_right_menu .address a {
+    color: #fff;
 }
 
 /* //footer_right */
@@ -181,16 +145,20 @@ body {
 /* footer_bottom */
 .footer_bottom {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 64px;
+    margin-top: 107px;
     padding: 32px 0;
     border-top: 1px solid #6c7275;
 }
 
 .footer_bottom_text {
     display: flex;
+    position: absolute;
+    left: 2px;
+    bottom: 7px;
 }
 
 .footer_bottom_text .copyright {
@@ -208,11 +176,53 @@ body {
     border-left: 1px solid #6c7275;
 }
 
-.privacy p {
+.privacy a {
     color: #6c7275;
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 400;
+}
+
+.payment_link {
+   position: absolute;
+   top: 32px;
+   right: -7px;
+}
+
+.payment_link .payment {
+    display: inline-block;
+    width: 48px;
+    height: 32px;
+    margin-right: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-image: url("../payments.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.payment_link:first-child .payment {
+    margin-right: 0;
+}
+
+.payment_visa {
+    background-position: 0 0;
+}
+.payment_amex {
+    background-position: -55px 0;
+}
+.payment_mastercard {
+    background-position: -110px 0;
+}
+.payment_stripe {
+    background-position: -165px 0;
+}
+.payment_paypal {
+    background-position: -220px 0;
+}
+.payment_applepay {
+    background-position: -275px 0;
 }
 
 /* // footer_bottom */
@@ -252,6 +262,11 @@ body {
         border-bottom: 1px solid #6c7275;
     }
 
+    .footer_right_menu .menu_title,
+    .footer_right_menu .menu_title button {
+        cursor: pointer;
+    }
+
     .footer_right_menu .menu_title img {
         display: inline-block;
         padding-right: 10px;
@@ -259,6 +274,12 @@ body {
 
     .footer_right_menu .menu_list {
         margin-top: 24px;
+    }
+
+    .footer_right_menu .menu_list li a {
+        display: block; 
+        width: 100%;
+        padding: 10px 0;
     }
 
     .footer_right_menu:last-child .menu_list {
@@ -285,8 +306,11 @@ body {
         border-left: none;
     }
 
-  
-    /* // footer_bottom */
+    .footer_bottom_text .privacy a {
+        color: #fff;
+        font-weight: bold;
+    }
 
+    /* // footer_bottom */
 }
 /* // Responsive */

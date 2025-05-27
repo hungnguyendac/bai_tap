@@ -1,111 +1,85 @@
-@font-face {
-    font-family: "Inter";
-    src: url("../font/Inter-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Inter";
-    src: url("../font/Inter-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Inter";
-    src: url("../font/Inter-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url("../font/SpaceGrotesk-Regular.woff") format("woff");
-
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url("../font/SpaceGrotesk-Medium.woff") format("woff");
-
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url("../font/SpaceGrotesk-SemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Regular.woff") format("woff");
-
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Medium.woff") format("woff");
-
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-
 .inner {
-    max-width: 1120px;
+    width: calc(100% - 64px);
+    max-width: min(1120px, 100%);
     margin: 0 auto;
-    padding: 18px clamp(16px, 5vw, 32px);
+    padding: 0 clamp(16px, 5vw, 26px);
+}
+ 
+span {
+    display: block;
 }
 
 /* Header */
 .header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: 60px;
 }
 
 .header_logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 24px;
+}
+
+.header_logo .logo_link {
+    color: #000;
 }
 
 .header_logo_text {
-    margin-left: 10px;
-    font-weight: 500;
-    font-size: 30px;
     font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.close_btn,
+.input_wrap {
+    display: none;
+}
+
+.header_menu {
+    max-width: 324px;
+    width: 100%;
 }
 
 .header_list {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.header_list.column-mode {
+.header_list.column_mode {
     flex-direction: column;
 }
 
 .header_item {
-    padding: 15px;
-    color: #9c9c9c;
-    font-size: 14px;
+    margin-left: 15px;
+    height: 24px;
+    line-height: 22px;
 }
 
-.header_item_black {
-    color: #000;
+.header_item_link {
+    color: #6c7275;
+    font-family: "Space Grotesk", inherit;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header_item_link:hover {
+    color: #141718;
+}
+
+.header_item:first-child .header_item_link {
+    color: #141718;
 }
 
 .header_icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 28px;
 }
 
 .icon,
@@ -113,34 +87,36 @@
 .icon_close {
     width: 24px;
     height: 24px;
-    margin-left: 20px;
+    margin-left: 17px;
     cursor: pointer;
-    background-image: url("../logo.png");
+    background-image: url("../icon.png");
     background-repeat: no-repeat;
 }
 
 .icon_menu {
     display: none;
-    background-position: -54px 0;
+    padding: 1px;
+    background-position: -57px 0;
+    line-height: 24px;
 }
 
 .icon_search {
-    background-position: -2px 0;
+    background-position: -2px -1px;
 }
 
 .icon_user {
-    background-position: -28px 0;
+    background-position: -28px -1px;
 }
 
 .icon_bag {
-    background-position: -107px 0;
+    background-position: -107px -1px;
 }
 
 .icon_number {
     width: 20px;
     height: 20px;
     margin-left: 4px;
-    margin-top: 2px;
+    margin-top: 1px;
     border-radius: 50%;
     background-color: #000;
     font-size: 12px;
@@ -156,14 +132,17 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    transition: all 0.5s ease;
-    width: 300px;
-    height: 800px;
+    right: 8.534%;
+    bottom: 0;
+    width: 303px;
+    transition: all 0.8s ease;
     padding: 20px 20px;
-    background-color: aliceblue;
+    background-color: #fff;
+    overflow-y: auto;
+    z-index: 1000;
 }
 
 .popup.active {
@@ -171,38 +150,57 @@
 }
 
 .popup_header {
+    margin-top: 5px;
 }
 
 .popup_logo {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-left: 4px;
+    margin-bottom: 3px;
 }
 
-.popup_logo_text {
-    font-size: 20px;
+.popup_logo .logo_link {
+    display: inline-block;
 }
 
-.icon_close {
+.popup_logo .popup_logo_text {
+    color: #494848;
+    font-size: 16px;
+}
+
+.popup_logo .icon_close {
+    position: absolute;
+    top: 22px;
+    right: 25px;
     background-position: -80px 0;
+}
+
+.icon_close:hover {
+    color: red;
 }
 
 .popup_input {
     display: flex;
     align-items: center;
     margin-top: 15px;
+    margin-bottom: 4px;
     height: 46px;
     border: 1px solid #494848;
     border-radius: 6px;
 }
 
 .popup_input .icon_search {
-    margin-right: 8px;
+    display: block;
+    padding-right: 20px;
 }
 
-.input_search {
-    width: 88%;
+.popup_input .input_search {
+    width: 85%;
     height: 46px;
     margin-left: 6px;
+    padding: 0 12px;
 }
 
 .input_search::placeholder {
@@ -211,7 +209,7 @@
 }
 
 .popup_menu {
-    margin-top: 16px;
+    margin-left: 4px;
 }
 
 .popup_menu_list {
@@ -220,17 +218,18 @@
 }
 
 .popup_menu_item {
-    height: 30px;
+    height: 32px;
     border-bottom: 1px solid #c5c1c1;
 }
 
 .popup_footer {
 }
 
-.title {
+.popup_footer .title {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 11px 0;
     border-bottom: 1px solid #9c9c9c;
 }
 
@@ -240,6 +239,9 @@
 }
 
 .title_icon {
+    position: absolute;
+    bottom: 10px;
+    right: 4px;
     display: flex;
     align-items: center;
 }
@@ -250,12 +252,14 @@
 
 .popup_button {
     margin-top: 30px;
+    margin-bottom: 23px;
 }
 
 .popup_button_sign {
     width: 295px;
     height: 52px;
-    padding: 10px 26px;
+    margin-left: 4px;
+    padding: 10px 25px;
     background-color: #000;
     border-radius: 6px;
     color: #fff;
@@ -266,31 +270,77 @@
 
 .popup_footer_icon {
     display: flex;
-    margin-top: 20px;
+    justify-content: flex-start;
+    height: 24px;
+    gap: 24px;
+}
+
+.popup_footer_icon a {
+    height: 24px;
 }
 
 .popup_footer_icon .icon {
     margin: 0;
-    margin-right: 20px;
+    line-height: 24px;
+}
+
+.popup_footer_icon span {
+    display: block;
 }
 
 .icon_instagram {
-    background-position: -186px 0;
+    background-position: -186px -1px;
 }
 
 .icon_facebook {
-    background-position: -160px 0;
+    background-position: -160px -1px;
 }
 
 .icon_youtube {
-    background-position: -212px 0;
+    background-position: -212px -1px;
 }
 /* // Popup Mobile */
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.header.menu-open .popup-menu {
+    transform: translateX(0);
+}
+
+.header.menu-open .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Responsive */
-@media screen and (max-width: 688px) {
+@media screen and (max-width: 768px) {
+    .inner {
+        padding-left: 0;
+    }
+
+    .header_logo {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+    }
+
     .icon_menu {
         display: inline-block;
+    }
+
+    .header_logo_text {
+        font-size: 16px;
     }
 
     .header_list,
@@ -299,9 +349,42 @@
         display: none;
     }
 
+    .header_icon {
+        position: absolute;
+        right: 32px;
+    }
+
     .popup .header_list {
         display: flex;
         flex-direction: column;
+    }
+    .popup .header_item {
+        position: relative;
+        margin-left: 0;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    
+    .popup .header_item .header_item_link {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        line-height: 60px;
+        z-index: 1;
+    }
+    .popup .header_item .header_item:first-child .header_item_link {
+        position: absolute;
+        top: -5px
+    }
+    
+    .popup .header_item .header_item:last-child .header_item_link {
+        position: absolute;
+        top: 0
     }
 }
 
