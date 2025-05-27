@@ -61,7 +61,6 @@
     margin-left: 0;
 }
 
-
 .icon_instagram {
     background-position: -186px 0;
 }
@@ -84,7 +83,6 @@
 }
 
 .footer_right_menu {
-   
 }
 
 .footer_right_menu .menu_title {
@@ -184,9 +182,9 @@
 }
 
 .payment_link {
-   position: absolute;
-   top: 32px;
-   right: -7px;
+    position: absolute;
+    top: 32px;
+    right: -7px;
 }
 
 .payment_link .payment {
@@ -235,12 +233,18 @@
         flex-direction: column;
     }
 
+    .footer_left_icon,
+    .footer_bottom_text,
+    .payment_link {
+        position: static;
+    }
+
     .footer_left {
         margin-bottom: 32px;
     }
 
-    .footer_left_text {
-        display: flex;
+    .footer_left_text p {
+        display: inline-block;
     }
 
     .footer_left_text p {
@@ -277,7 +281,7 @@
     }
 
     .footer_right_menu .menu_list li a {
-        display: block; 
+        display: block;
         width: 100%;
         padding: 10px 0;
     }
