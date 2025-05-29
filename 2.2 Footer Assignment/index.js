@@ -1,5 +1,5 @@
-const menuTitle = document.querySelectorAll(".is_active");
-const menuList = document.querySelectorAll(".menu_list");
+const buttonNav = document.querySelectorAll(".is_active");
+const menuList = document.querySelectorAll(".nav_menu");
 
 const textPrivacy = document.querySelector(".is_changed");
 
@@ -17,22 +17,27 @@ window.addEventListener("load", updateText);
 // Gọi khi resize trình duyệt
 window.addEventListener("resize", updateText);
 
-menuTitle.forEach((btn, index) => {
+//     btn.addEventListener("click", () => {
+//         const menu = menuList[index];
+//         if (window.innerWidth <= 600) {
+//             if (menu.style.display === "none" || menu.style.display === "") {
+//                 menu.style.display = "flex";
+//             } else {
+//                 menu.style.display = "none";
+//             }
+//         }
+//     });
+//     window.addEventListener("resize", () => {
+//         if (window.innerWidth > 600) {
+//             menuList.forEach((menu) => {
+//                 menu.style.display = "flex";
+//             });
+//         }
+//     });
+// });
+buttonNav.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         const menu = menuList[index];
-        if (window.innerWidth <= 600) {
-            if (menu.style.display === "none" || menu.style.display === "") {
-                menu.style.display = "flex";
-            } else {
-                menu.style.display = "none";
-            }
-        }
-    });
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 600) {
-            menuList.forEach((menu) => {
-                menu.style.display = "flex";
-            });
-        }
+        menu.classList.toggle("closed");
     });
 });
