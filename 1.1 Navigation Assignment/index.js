@@ -1,4 +1,4 @@
-const menuIcon = document.querySelector(".icon_menu");
+const menuIcon = document.querySelector(".icon_bars");
 const popup = document.querySelector(".popup");
 const closeIcon = document.querySelector(".icon_close");
 
@@ -34,15 +34,11 @@ const closePopup = () => {
     header.classList.remove("menu-open");
 };
 
-menuIcon.addEventListener("click", () => {
-    openPopup();
-});
+menuIcon.addEventListener("click", openPopup);
 
-closeIcon.addEventListener("click", () => {
-    closePopup();
-});
+closeIcon.addEventListener("click", closePopup);
 
-document.querySelector(".overlay").addEventListener("click", () => {
+document.querySelector(".dimed").addEventListener("click", () => {
     header.classList.remove("menu-open");
     closePopup();
 });

@@ -1,6 +1,22 @@
 const menuTitle = document.querySelectorAll(".is_active");
 const menuList = document.querySelectorAll(".menu_list");
 
+const textPrivacy = document.querySelector(".is_changed");
+
+const updateText = () => {
+    if (window.innerWidth <= 600) {
+        textPrivacy.textContent = "Terms of Use";
+    } else {
+        textPrivacy.textContent = "Terms & Conditions";
+    }
+};
+
+// Gọi khi trang load
+window.addEventListener("load", updateText);
+
+// Gọi khi resize trình duyệt
+window.addEventListener("resize", updateText);
+
 menuTitle.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         const menu = menuList[index];
