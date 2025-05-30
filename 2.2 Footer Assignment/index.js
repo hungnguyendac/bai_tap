@@ -4,7 +4,7 @@ const menuList = document.querySelectorAll(".nav_menu");
 const textPrivacy = document.querySelector(".is_changed");
 
 const updateText = () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 670) {
         textPrivacy.textContent = "Terms of Use";
     } else {
         textPrivacy.textContent = "Terms & Conditions";

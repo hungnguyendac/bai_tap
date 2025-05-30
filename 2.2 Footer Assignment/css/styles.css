@@ -313,7 +313,7 @@
     }
 
     .footer_top .footer_nav {
-        width: 311px;
+        width: 100%;
         padding-top: 32px;
         border-top: 1px solid #6c7275;
     }
@@ -364,7 +364,7 @@
     }
 
     .footer_address {
-        width: 311px;
+        width: 100%;
         margin-top: 21px;
         padding-top: 32px;
         padding-right: 0;
@@ -380,7 +380,7 @@
     .footer_bottom {
         flex-direction: column-reverse;
         align-items: center;
-        width: 311px;
+        width: 100%;
         margin-top: 67px;
         border-top: 1px solid #6c7275;
     }
@@ -392,13 +392,13 @@
         flex-direction: column-reverse;
     }
     .bottom_text .privacy {
-        position: relative;
         width: 100%;
-        padding: 11px 0;
+        margin-left: 0;
+        padding: 2px 0;
         border-left: none;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 16px;
     }
 
     .bottom_text .privacy .privacy_text {
@@ -406,17 +406,9 @@
         font-family: "Poppins", sans-serif;
         font-size: 12px;
         font-weight: 600;
+        line-height: 20px;
     }
 
-    .bottom_text .privacy .privacy_text:first-child {
-        position: absolute;
-        left: 51px;
-    }
-
-    .bottom_text .privacy .privacy_text:last-child {
-        position: absolute;
-        right: 68px;
-    }
 
     .bottom_text .copyright {
         margin-top: 28px;
