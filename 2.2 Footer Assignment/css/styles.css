@@ -273,7 +273,13 @@
     }
 }
 
-@media screen and (max-width: 673px) {
+@media screen and (max-width: 770px) {
+    .footer_nav {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 670px) {
     .footer .inner {
         width: 100%;
         margin: 0 auto;
