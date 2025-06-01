@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (max-width: 563px) {
+@media screen and (max-width: 576px) {
     .articles .inner {
         max-width: 1121px;
         margin: 0 auto;
@@ -69,7 +69,7 @@
     }
 }
 
-@media screen and (max-width: 495px) {
+@media screen and (max-width: 513px) {
     .articles .inner {
         max-width: 1121px;
         margin: 0 auto;
@@ -103,7 +103,7 @@
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 412px) {
     .articles_list .articles_card .card_item {
         width: 100%;
     }
