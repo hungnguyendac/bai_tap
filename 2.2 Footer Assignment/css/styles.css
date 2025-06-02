@@ -8,6 +8,19 @@
   padding: 80px 32px 32px 32px;
 }
 
+.icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/sp_icons.png);
+  background-repeat: no-repeat;
+  background-size: 226px 51px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
 /* footer_top */
 .footer_top {
   display: flex;
@@ -39,26 +52,16 @@
   gap: 24px;
 }
 
-.social_icon .icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/icon.png");
-  background-repeat: no-repeat;
-  filter: brightness(0) invert(1);
-  cursor: pointer;
-}
-
 .icon_instagram {
-  background-position: -186px -1px;
+  background-position: -1px -24px;
 }
 
 .icon_facebook {
-  background-position: -160px -1px;
+  background-position: -26px -24px;
 }
 
 .icon_youtube {
-  background-position: -212px -1px;
+  background-position: -51px -24px;
 }
 
 .footer_nav {
@@ -67,15 +70,13 @@
 
 .footer_nav .nav_title {
   display: flex;
+  padding-top: 1px;
+  padding-left: 2px;
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
- line-height: 24px;
-}
-
-.footer_nav .nav_title .img_nav {
-  display: none;
+  line-height: 24px;
 }
 
 .nav_link {
@@ -85,7 +86,7 @@
 .nav_link .nav_menu {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  margin-top: 20px;
 }
 
 .nav_link .menu_item:hover .link_item {
@@ -93,8 +94,9 @@
 }
 
 .nav_link .menu_item .link_item {
-  display: inline-block;
-  white-space: nowrap;
+  display: block;
+  margin-top: 16px;
+  padding: 3px 0px 5px 2px;
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -103,6 +105,9 @@
 }
 
 .footer_address {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   padding-right: 15px;
 }
 
@@ -117,19 +122,20 @@
 .footer_address .address_detail {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
-.footer_address .address_detail .text,
-.footer_address .address_detail .phone {
+.footer_address .text,
+.footer_address .phone {
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  line-height: 30px;
 }
 
-.footer_address .address_detail .text {
-  line-height: 30px;
+.footer_address .phone {
+  margin-top: 15px;
+  line-height: 22px;
 }
 
 /* // footer_top */
