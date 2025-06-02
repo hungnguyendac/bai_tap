@@ -325,7 +325,6 @@ span {
 }
 
 /* // Popup Mobile */
-
 .dimmed {
   position: fixed;
   top: 0;
@@ -408,7 +407,6 @@ span {
   .popup_footer {
     margin-top: auto;
   }
-
   /* // Popup */
 }
 
@@ -447,5 +445,4 @@ span {
     background-position: 0px 3px;
   }
 }
-
 /* // Responsive */
