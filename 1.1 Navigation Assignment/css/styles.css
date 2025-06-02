@@ -43,7 +43,7 @@ span {
   color: #000;
 }
 
-.header_logo_text {
+.header_logo .header_logo_text {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -167,8 +167,12 @@ span {
 }
 
 .popup_logo .header_logo_text {
+  margin-left: 3px;
   color: #494848;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 16px;
+  line-height: 24px;
 }
 
 .popup_logo .header_logo_text .dot {
@@ -246,7 +250,7 @@ span {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 31px;
   letter-spacing: -0.4px;
 }
 
@@ -264,12 +268,10 @@ span {
 }
 
 .title_icon .icon_bag {
-  margin-left: 0;
-  background-position: -52px 0px;
+  background-position: -52px -1px;
 }
 
 .title_icon .icon_heart {
-  margin-left: 0;
   background-position: -127px -1px;
 }
 
@@ -348,19 +350,20 @@ span {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  .popup {
-    display: flex;
-    flex-direction: column;
+  
+  .header_logo {
+    gap: 4px;
   }
-
+  
   .header_logo .icon_bars {
     display: block;
+    padding: 10px;
   }
-
+  
   .header_logo .header_logo_text {
-    margin-left: 4px;
+    margin-top: 1px;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 24px;
   }
 
   .header_list,
@@ -368,12 +371,17 @@ span {
   .header_icon .user {
     display: none;
   }
-
+  
   .header_icon .icon_number {
     top: 4px;
   }
-
+  
   /* Popup */
+  .popup {
+    display: flex;
+    flex-direction: column;
+  }
+
   .popup .header_list {
     display: block;
   }
