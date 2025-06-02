@@ -54,6 +54,7 @@
 
 .swiper-wrapper {
     box-sizing: border-box;
+    margin-bottom: 58px;
 }
 
 .swiper-wrapper .swiper-slide {
@@ -86,7 +87,7 @@
 
 .swiper-slide .star_rating {
     display: flex;
-    gap: 2px;
+    letter-spacing: 2px;
 }
 
 .star_rating .star {
@@ -131,9 +132,8 @@
 
 .badge_group .new_product{
     display: block;
-    width: 67px;
-    height: 24px;
-    padding: 4px 0;
+    margin-bottom: 8px;
+    padding: 4px 14px;
     text-align: center;
     background-color: #fff;
     border-radius: 4px;
@@ -145,8 +145,7 @@
 
 .badge_group .sale_product {
     display: block;
-    width: 71px;
-    height: 24px;
+    padding: 4px 14px;
     border-radius: 4px;
     background-color: rgba(56, 203, 137, 1);
     text-align: center;
@@ -154,7 +153,7 @@
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 19px;
+    line-height: 16px;
 }
 
 .swiper-slide .icon {
@@ -192,8 +191,35 @@
     line-height: 28px;
     letter-spacing: -0.4px;
     cursor: pointer;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-slide:hover .button_card {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 .swiper-slide .button_card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);;
 }
+
+.swiper .swiper-scrollbar {
+    left: 0;
+    opacity: 1 !important;
+}
+
+.swiper-scrollbar .swiper-scrollbar-drag {
+    width: 834.304px !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 1300px){
+    .product_title .link_title {
+        position: unset;
+        margin-right: 15px;
+    }
+}
+
+/* // Responsive */
