@@ -394,11 +394,11 @@
     .bottom_text .privacy {
         width: 100%;
         margin-left: 0;
-        padding: 2px 0;
+        padding: 1px 0;
         border-left: none;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+        gap: 28px;
     }
 
     .bottom_text .privacy .privacy_text {
