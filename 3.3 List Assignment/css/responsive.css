@@ -125,6 +125,7 @@
 
     .articles_list .articles_card {
         width: 100%;
+        gap: 23pxgit ad;
     }
 
     .articles_card .articles_title {
