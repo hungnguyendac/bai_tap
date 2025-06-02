@@ -349,7 +349,6 @@ span {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  
   .header_logo {
     gap: 4px;
   }
