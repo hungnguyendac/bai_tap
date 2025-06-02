@@ -446,6 +446,10 @@ span {
         width: 100%;
         height: 100%;
         padding: 16px 0;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
     }
 
     .popup_footer {
@@ -467,6 +471,12 @@ span {
 
     .popup_input .icon_search {
         background-position: 0px 1px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .popup {
+        padding: 15px;
     }
 }
 
