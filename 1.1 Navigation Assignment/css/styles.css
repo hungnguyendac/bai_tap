@@ -160,7 +160,7 @@ span {
   margin-left: -3px;
 }
 
-.popup_logo .header_logo_text {
+.popup_logo .logo_text {
   margin-left: 3px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -169,8 +169,8 @@ span {
   line-height: 24px;
 }
 
-.popup_logo .header_logo_text .dot {
-  color: gray;
+.popup_logo .logo_text .dot {
+  color: rgba(108, 114, 117, 1);
 }
 
 .popup_logo .icon_close {
@@ -183,7 +183,7 @@ span {
   margin-top: 15px;
   padding: 0 8px 0 15px;
   height: 46px;
-  border: 1px solid #000;
+  border: 1px solid rgba(108, 114, 117, 1);
   border-radius: 6px;
   box-sizing: border-box;
 }
@@ -365,7 +365,7 @@ span {
     flex-direction: column;
   }
   
-  .popup_logo .header_logo_text {
+  .popup_logo .logo_text {
     font-size: 16px;
     line-height: 24px;
   }
