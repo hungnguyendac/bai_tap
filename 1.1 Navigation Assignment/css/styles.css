@@ -1,26 +1,3 @@
-.inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 16px 32px;
-}
-
-span {
-  display: inline-block;
-}
-
-.icon {
-  display: inline-block;
-  overflow: hidden;
-  width: 24px;
-  height: 24px;
-  background-image: url(../sp_icons.png);
-  background-repeat: no-repeat;
-  background-size: 226px 51px;
-  vertical-align: top;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
 /* Header */
 .header .inner {
   display: flex;
@@ -50,7 +27,6 @@ span {
 
 .header_logo .icon_bars {
   display: none;
-  background-position: -76px 1px;
   transform: translateY(-2px);
 }
 
@@ -80,7 +56,6 @@ span {
   color: #000;
 }
 
-/* Header_icon */
 .header_icon {
   display: flex;
   align-items: center;
@@ -98,18 +73,6 @@ span {
   height: 24px;
 }
 
-.header_icon .icon_search {
-  background-position: -1px -1px;
-}
-
-.header_icon .icon_user {
-  background-position: -26px -1px;
-}
-
-.header_icon .icon_bag {
-  background-position: -50px -1px;
-}
-
 .header_icon .icon_number {
   position: absolute;
   top: 4px;
@@ -124,7 +87,6 @@ span {
   line-height: 20px;
   cursor: default;
 }
-/* // Header_icon */
 /* // Header */
 
 /* Popup Mobile */
@@ -173,10 +135,6 @@ span {
   color: rgba(108, 114, 117, 1);
 }
 
-.popup_logo .icon_close {
-  background-position: -101px -2px;
-}
-
 .popup_input {
   display: flex;
   align-items: center;
@@ -190,7 +148,6 @@ span {
 
 .popup_input .icon_search {
   display: block;
-  background-position: -1px -1px;
 }
 
 .popup_input .input_search::placeholder {
@@ -257,14 +214,6 @@ span {
   display: block;
 }
 
-.title_icon .icon_bag {
-  background-position: -52px -1px;
-}
-
-.title_icon .icon_heart {
-  background-position: -127px -2px;
-}
-
 .title_icon .icon_number {
   width: 20px;
   height: 20px;
@@ -301,33 +250,9 @@ span {
   gap: 24px;
   height: 24px;
 }
-
-.icon_instagram {
-  background-position: -151px -1px;
-}
-
-.icon_facebook {
-  background-position: -176px -1px;
-}
-
-.icon_youtube {
-  background-position: -201px -1px;
-}
-
 /* // Popup Mobile */
-.dimmed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
 
+/* On-Off dimmed */
 .header.menu_open .popup_menu {
   transform: translateX(0);
 }
@@ -336,6 +261,7 @@ span {
   opacity: 1;
   visibility: visible;
 }
+/* // On-Off dimmed */
 
 /* Responsive */
 @media screen and (max-width: 768px) {
@@ -364,7 +290,7 @@ span {
     display: flex;
     flex-direction: column;
   }
-  
+
   .popup_logo .logo_text {
     font-size: 16px;
     line-height: 24px;
@@ -373,11 +299,11 @@ span {
   .popup .header_list {
     display: block;
   }
-  
+
   .popup_menu .header_list {
     margin-top: -8px;
   }
-  
+
   .popup_menu .header_item {
     position: relative;
   }

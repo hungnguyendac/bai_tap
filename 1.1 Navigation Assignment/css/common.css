@@ -1,0 +1,79 @@
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 32px;
+}
+
+span {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(../sp_icons.png);
+  background-repeat: no-repeat;
+  background-size: 226px 51px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.icon_bars {
+  background-position: -76px 1px;
+}
+
+.header_icon .icon_search {
+  background-position: -1px -1px;
+}
+
+.header_icon .icon_user {
+  background-position: -26px -1px;
+}
+
+.header_icon .icon_bag {
+  background-position: -50px -1px;
+}
+
+.icon_close {
+  background-position: -101px -2px;
+}
+
+.icon_search {
+  background-position: -1px -1px;
+}
+
+.icon_bag {
+  background-position: -52px -1px;
+}
+
+.icon_heart {
+  background-position: -127px -2px;
+}
+
+.icon_instagram {
+  background-position: -151px -1px;
+}
+
+.icon_facebook {
+  background-position: -176px -1px;
+}
+
+.icon_youtube {
+  background-position: -201px -1px;
+}
+
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}

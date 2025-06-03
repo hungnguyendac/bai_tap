@@ -8,19 +8,6 @@
   padding: 80px 32px 32px 32px;
 }
 
-.icon {
-  display: inline-block;
-  overflow: hidden;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/sp_icons.png);
-  background-repeat: no-repeat;
-  background-size: 226px 51px;
-  vertical-align: top;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
 /* footer_top */
 .footer_top {
   display: flex;
@@ -49,20 +36,8 @@
 
 .social_icon {
   display: flex;
-  margin-top: 30px;
+  margin-top: 31px;
   gap: 24px;
-}
-
-.icon_instagram {
-  background-position: -1px -24px;
-}
-
-.icon_facebook {
-  background-position: -26px -24px;
-}
-
-.icon_youtube {
-  background-position: -51px -24px;
 }
 
 .footer_nav {
@@ -173,6 +148,7 @@
 
 .bottom_text .privacy {
   display: flex;
+  padding-top: 2px;
   padding-left: 16px;
   gap: 16px;
   border-left: 1px solid #6c7275;

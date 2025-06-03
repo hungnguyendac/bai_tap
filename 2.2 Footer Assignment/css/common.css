@@ -1,0 +1,25 @@
+.icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/sp_icons.png);
+  background-repeat: no-repeat;
+  background-size: 226px 51px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.icon_instagram {
+  background-position: -1px -25px;
+}
+
+.icon_facebook {
+  background-position: -26px -25px;
+}
+
+.icon_youtube {
+  background-position: -51px -25px;
+}
+
