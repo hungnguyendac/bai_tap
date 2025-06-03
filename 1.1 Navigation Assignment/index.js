@@ -5,36 +5,24 @@ const headerList = document.querySelector(".header_list");
 const headerItems = document.querySelectorAll(".header_item");
 const popupMenu = document.querySelector(".popup_menu");
 const header = document.querySelector(".header");
+
 // Hàm mở popup
 const openPopup = () => {
-    popupMenu.appendChild(headerList);
-    popup.classList.add("active");
-    header.classList.toggle("menu_open");
-    headerItems.forEach((item) => {
-        item.classList.add("popup_menu_item");
-    });
+  popupMenu.appendChild(headerList);
+  header.classList.add("menu_open");
 };
 // Hàm tắt popup
 const closePopup = () => {
-    document.querySelector(".header_menu").appendChild(headerList);
-    popup.classList.remove("active");
-    headerItems.forEach((item) => {
-        item.classList.remove("popup_menu_item");
-    });
-    header.classList.remove("menu_open");
+  document.querySelector(".header_menu").appendChild(headerList);
+  header.classList.remove("menu_open");
 };
 
 menuIcon.addEventListener("click", openPopup);
 closeIcon.addEventListener("click", closePopup);
-document.querySelector(".dimmed").addEventListener("click", () => {
-    header.classList.remove("menu_open");
-    closePopup();
-});
-
-// Kiểm tra độ dài web để tắt Popup
+document.querySelector(".dimmed").addEventListener("click", closePopup);
 window.addEventListener("resize", () => {
-    const width = window.innerWidth;
-    if (header.classList.contains("menu_open") && width >= 770) {
-        closePopup();
-    }
+  const width = window.innerWidth;
+  if (header.classList.contains("menu_open") && width >= 770) {
+    closePopup();
+  }
 });

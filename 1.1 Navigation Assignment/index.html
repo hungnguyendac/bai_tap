@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Link css-->
-  <link rel="stylesheet" href="./css/_reset.css">
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/font_style.css">
   <link rel="stylesheet" href="./css/styles.css">
   <!-- // Link css -->
@@ -17,16 +17,21 @@
 <body>
   <header class="header">
     <div class="inner">
-      <!-- header -->
+      <!-- Header box -->
       <div class="header_box">
+        <!-- Header logo -->
         <div class="header_logo">
-          <button type="button" class="button_icon is_active">
+          <button class="menu_button is_active" type="button" aria-label="Open popup">
             <span class="icon icon_bars"></span>
           </button>
-          <a class="logo_link" href="#none">
-            <h1 class="header_logo_text">3legant<span class="dot">.</span></h1>
-          </a>
+          <h1 class="logo">
+            <a class="logo_link" href="#none">
+              <img class="logo_img" src="./logo.png" alt="Logo">
+            </a>
+          </h1>
         </div>
+        <!-- // Header logo -->
+        <!-- Header menu -->
         <nav class="header_menu">
           <ul class="header_list">
             <li class="header_item">
@@ -40,7 +45,7 @@
               </a>
             </li>
             <li class="header_item">
-              <a class="header_item_link" href="#none" aria-label="product">
+              <a class="header_item_link" href="#none" aria-label="Product">
                 Product
               </a>
             </li>
@@ -51,46 +56,53 @@
             </li>
           </ul>
         </nav>
+        <!-- // Header menu -->
+        <!-- Header icon -->
         <div class="header_icon">
-          <button class="icon icon_search"></button>
-          <a class="user" href="#none" aria-label="User">
+          <button class="search_button" type="button" aria-label="Search">
+            <span class="icon icon_search"></span>
+          </button>
+          <a class="user_link" href="#none" aria-label="User">
             <span class="icon icon_user"></span>
           </a>
-          <a class="bag" href="#none" aria-label="Shopping">
+          <a class="bag_link" href="#none" aria-label="Shopping">
             <span class="icon icon_bag">
               <span class="icon_number">2</span>
             </span>
           </a>
         </div>
+        <!-- // Header icon -->
       </div>
-      <!-- Popup Mobile -->
+      <!-- // Header box -->
+
+      <!-- Popup mobile -->
       <div class="popup">
-        <!-- popup_header -->
+        <!-- popup header -->
         <div class="popup_header">
           <div class="popup_logo">
-            <a class="logo_link" href="#none">
-              <h2 class="header_logo_text">3legant<span>.</span></h2>
+            <a class="logo_link" href="#none" aria-label="Logo">
+              <h2 class="header_logo_text">3legant<span class="dot">.</span></h2>
             </a>
             <button class="button_close" type="button" aria-label="Close">
               <span class="icon icon_close"></span>
             </button>
           </div>
           <div class="popup_input">
-            <button type="button" aria-label="Search">
+            <button class="search_button" type="button" aria-label="Search">
               <span class="icon icon_search"></span>
             </button>
             <input class="input_search" type="text" placeholder="Search">
           </div>
           <nav class="popup_menu"></nav>
         </div>
-        <!-- // popup_header -->
+        <!-- // Popup header -->
 
-        <!-- popup_footer -->
+        <!-- Popup footer -->
         <div class="popup_footer">
           <div class="title">
             <p class="title_text">Cart</p>
             <div class="title_icon">
-              <a href="#none" aria-label="Shopping">
+              <a class="bag_link" href="#none" aria-label="Shopping">
                 <span class="icon icon_bag"></span>
               </a>
               <span class="icon_number">2</span>
@@ -99,7 +111,7 @@
           <div class="title">
             <p class="title_text">Wishlist</p>
             <div class="title_icon">
-              <a href="#none" aria-label="Favorite Products">
+              <a class="love_link" href="#none" aria-label="Favorite Products">
                 <span class="icon icon_heart"></span>
               </a>
               <span class="icon_number">2</span>
@@ -109,27 +121,27 @@
             <button class="popup_button_sign">Sign In</button>
           </div>
           <div class="popup_footer_icon">
-            <a aria-label="Instagram" href="#none">
+            <a class="instagram_link" href="#none" aria-label="Instagram">
               <span class="icon icon_instagram"></span>
             </a>
-            <a aria-label="Facebook" href="#none">
+            <a class="fb_link" href="#none" aria-label="Facebook">
               <span class="icon icon_facebook"></span>
             </a>
-            <a aria-label="Youtube" href="#none">
+            <a class="ytb_link" href="#none" aria-label="Youtube">
               <span class="icon icon_youtube"></span>
             </a>
           </div>
         </div>
+        <!-- // Popup footer -->
       </div>
-      <!-- //popup_footer -->
-      <!-- // Popup Mobile -->
+      <!-- // Popup mobile -->
     </div>
-    <!-- // Header -->
   </header>
 
-  <!-- Dimed -->
+  <!-- Dimmed -->
   <div class="dimmed"></div>
-  <!-- // Dimed -->
+  <!-- // Dimmed -->
   <script src="./index.js"></script>
 </body>
+
 </html>

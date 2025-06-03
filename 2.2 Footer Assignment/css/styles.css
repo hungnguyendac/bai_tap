@@ -204,6 +204,14 @@
 
 /* Responsive */
 @media screen and (max-width: 913px) {
+  .footer_top {
+    margin-right: 0;
+  }
+  
+  .footer_text .text {
+    font-size: 18px;
+  }
+
   .footer_bottom .bottom_text {
     flex-direction: column;
     justify-content: center;
@@ -211,25 +219,12 @@
   }
 
   .bottom_text .privacy {
-    margin-top: 10px;
+    padding-left: 0;
     border-left: none;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .footer_brand .footer_text .text {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .footer_nav {
-    width: 120px;
-  }
-}
-
 @media screen and (max-width: 670px) {
-
   /* footer_top */
   .footer_top {
     flex-direction: column;
