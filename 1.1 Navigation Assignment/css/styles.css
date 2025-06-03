@@ -340,7 +340,8 @@ span {
 /* Responsive */
 @media screen and (max-width: 768px) {
   .logo_link .logo_img {
-    width: 64%;
+    width: 70px;
+    margin-top: 3px;
     margin-left: 4px;
   }
 
