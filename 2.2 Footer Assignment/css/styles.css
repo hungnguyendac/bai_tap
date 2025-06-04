@@ -6,11 +6,10 @@
 .footer_top {
   display: flex;
   justify-content: space-between;
-  margin-right: 15px;
 }
 
 .footer_brand {
-  flex-grow: 0.76;
+  flex-grow: 1;
 }
 
 .footer_brand .footer_text {
@@ -36,12 +35,11 @@
 
 .footer_nav {
   width: 160px;
+  margin-left: 32px;
 }
 
 .footer_nav .nav_title {
   display: flex;
-  padding-top: 1px;
-  padding-left: 2px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -63,7 +61,6 @@
   margin-top: 16px;
 }
 
-
 .nav_link .menu_item .link_item {
   display: inline-block;
   padding: 4px 0px;
@@ -78,29 +75,14 @@
   text-decoration: underline;
 }
 
-.footer_address {
+.footer_nav .address_detail {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  margin-top: 36px;
 }
 
-.footer_address .address_title {
-  padding-top: 1px;
-  padding-left: 2px;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  color: #fff;
-}
-
-.footer_address .address_detail {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer_address .text,
-.footer_address .phone {
+.footer_nav .text,
+.footer_nav .phone {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -108,10 +90,11 @@
   color: #fff;
 }
 
-.footer_address .phone {
-  margin-top: 15px;
+.footer_nav .phone {
+  margin-top: 14px;
   line-height: 22px;
 }
+
 /* // Footer top */
 
 /* Footer bottom */
@@ -120,8 +103,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 58px;
-  padding: 32px 0;
+  margin-top: 60px;
+  padding: 31px 0;
   border-top: 1px solid #6c7275;
 }
 
@@ -170,6 +153,7 @@
   object-fit: cover;
   vertical-align: bottom;
 }
+
 /* // Footer bottom */
 
 /* Responsive */
@@ -202,13 +186,12 @@
   }
 
   .footer_top .footer_brand {
-    padding-bottom: 32px;
+    padding-bottom: 33px;
   }
 
   .footer_top .footer_text {
     display: block;
     max-width: none;
-    margin-top: 25px;
   }
 
   .footer_top .footer_text .text {
@@ -225,21 +208,22 @@
 
   .footer_top .footer_nav {
     width: 100%;
-    padding: 32px 0;
+    margin-left: 0;
+    padding: 28px 0;
     border-top: 1px solid #6c7275;
   }
 
-  .footer_top .nav_title {
+  .footer_nav:not(:last-child) .nav_title {
     position: relative;
     display: block;
     padding-left: 0;
     cursor: pointer;
   }
 
-  .footer_nav .nav_title::after {
+  .footer_nav:not(:last-child) .nav_title::after {
     position: absolute;
+    top: -3px;
     right: 0;
-    top: -1px;
     width: 24px;
     height: 24px;
     background-image: url(../images/sp_icons.png);
@@ -248,10 +232,15 @@
     background-position: -76px -26px;
     transition: transform 0.5s ease;
     content: '';
+    transform: rotate(180deg);
   }
 
-  .footer_nav .nav_title.rotated::after {
-    transform: rotate(180deg);
+  .footer_nav:not(:last-child) .nav_title.rotated::after {
+    transform: rotate(0deg);
+  }
+
+  .footer_nav .nav_title {
+    margin-top: 7px;
   }
 
   .footer_nav .nav_menu {
@@ -259,36 +248,35 @@
     max-height: 0;
     margin-top: 0;
     overflow: hidden;
-    opacity: 1;
-    transition: all 0.3s ease;
+    opacity: 0;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.5s ease;
   }
 
   /* Open-Close nav menu */
   .footer_nav .nav_menu.is_show {
     max-height: 250px;
-    overflow: visible;
+    opacity: 1;
+    overflow: hidden;
   }
 
-  .nav_link .menu_item .link_item {
-    display: block;
-    padding: 4px 0;
+  .nav_menu .menu_item {
+    margin-top: 16px;
   }
 
-  .footer_address {
-    gap: 18px;
-    margin-top: -4px;
-    padding: 32px 0;
-    border-top: 1px solid rgba(108, 114, 117, 1);
+  .menu_item .link_item {
+    padding: 8px 0;
   }
 
-  .footer_address .address_title {
-    cursor: default;
+  .footer_nav .address_detail {
+    margin-top: 17px;
   }
 
   .footer_bottom {
     flex-direction: column-reverse;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 36px;
   }
 
   .footer_bottom .bottom_text {
@@ -319,7 +307,8 @@
     justify-content: center;
     gap: 4.6px;
     width: 100%;
-    margin-top: -9px;
+    margin-top: -8px;
   }
 }
+
 /* // Responsive */
