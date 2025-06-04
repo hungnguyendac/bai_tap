@@ -19,7 +19,7 @@ window.addEventListener("resize", () => {
   updateText();
 });
 
-// Click mở menu + xoay icon khi màn nhỏ
+// Click to open menu + rotate icon when screen is small
 navTitles.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const menu = menuList[index];
