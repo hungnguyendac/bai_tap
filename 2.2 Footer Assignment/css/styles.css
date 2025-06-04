@@ -85,7 +85,7 @@
   gap: 35px;
 }
 
-.footer_address .nav_title {
+.footer_address .address_title {
   padding-top: 1px;
   padding-left: 2px;
   font-family: "Poppins", sans-serif;
@@ -256,18 +256,17 @@
 
   .footer_nav .nav_menu {
     width: 100%;
-    max-width: 311px;
-    height: auto;
+    max-height: 0;
     margin-top: 0;
     overflow: hidden;
     opacity: 1;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition: all 0.3s ease;
   }
 
   /* Open-Close nav menu */
-  .footer_nav .nav_menu.closed {
-    max-height: 0;
-    opacity: 0;
+  .footer_nav .nav_menu.is_show {
+    max-height: 250px;
+    overflow: visible;
   }
 
   .nav_link .menu_item .link_item {
@@ -282,7 +281,7 @@
     border-top: 1px solid rgba(108, 114, 117, 1);
   }
 
-  .footer_address .nav_title {
+  .footer_address .address_title {
     cursor: default;
   }
 

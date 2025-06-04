@@ -15,7 +15,7 @@ navTitles.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const menu = menuList[index];
     if (menu) {
-      menu.classList.toggle("closed");
+      menu.classList.toggle("is_show");
     }
   });
 });
