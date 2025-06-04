@@ -190,7 +190,7 @@
   }
 
   .footer_top .footer_brand {
-    padding-bottom: 33px;
+    padding-bottom: 32px;
   }
 
   .footer_top .footer_text {
@@ -226,7 +226,7 @@
 
   .footer_nav:not(:last-child) .nav_title::after {
     position: absolute;
-    top: -3px;
+    top: -1px;
     right: 0;
     width: 24px;
     height: 24px;
@@ -239,12 +239,13 @@
     transform: rotate(180deg);
   }
 
-  .footer_nav:not(:last-child) .nav_title.rotated::after {
+  .footer_nav:not(:last-child) .nav_title.is_open::after {
     transform: rotate(0deg);
   }
 
   .footer_nav .nav_title {
-    margin-top: 7px;
+    margin-top: 5px;
+    padding-bottom: 2px;
   }
 
   .footer_nav .nav_menu {
@@ -311,7 +312,8 @@
     justify-content: center;
     gap: 4.6px;
     width: 100%;
-    margin-top: -9px;
+    margin-top: -8px;
   }
 }
+
 /* // Responsive */

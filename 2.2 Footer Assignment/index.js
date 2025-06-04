@@ -27,7 +27,7 @@ navTitles.forEach((btn, index) => {
       menu.classList.toggle("is_show");
     }
     if (window.innerWidth <= 768) {
-      btn.classList.toggle("rotated");
+      btn.classList.toggle("is_open");
     }
   });
 });
