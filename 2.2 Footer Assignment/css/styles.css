@@ -173,7 +173,7 @@
 /* // Footer bottom */
 
 /* Responsive */
-@media screen and (max-width: 913px) {
+@media screen and (max-width: 992px) {
   .footer_text .text {
     font-size: 18px;
   }
@@ -190,7 +190,7 @@
   }
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 768px) {
   .inner {
     max-width: none;
     padding: 64px 32px 24px 32px;

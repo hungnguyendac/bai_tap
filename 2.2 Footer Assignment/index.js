@@ -26,7 +26,7 @@ navTitles.forEach((btn, index) => {
     if (menu) {
       menu.classList.toggle("is_show");
     }
-    if (window.innerWidth <= 670) {
+    if (window.innerWidth <= 768) {
       btn.classList.toggle("rotated");
     }
   });
