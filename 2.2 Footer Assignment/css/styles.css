@@ -258,7 +258,6 @@
       opacity 0.5s ease;
   }
 
-  /* Open-Close nav menu */
   .footer_nav .nav_menu.is_show {
     max-height: 250px;
     opacity: 1;
