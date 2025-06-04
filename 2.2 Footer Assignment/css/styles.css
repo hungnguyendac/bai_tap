@@ -12,6 +12,10 @@
   flex-grow: 1;
 }
 
+.footer_brand .logo_link {
+  display: inline-block;
+}
+
 .footer_brand .footer_text {
   display: flex;
   flex-direction: column;
