@@ -1,78 +1,60 @@
-.articles .inner {
+.blog .inner {
   max-width: 1121px;
   margin: 0 auto;
   padding: 80px 32px;
 }
 
-.articles_logo {
+/* Blog header */
+.blog_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.articles_logo .logo_link .logo {
-  color: rgba(0, 0, 0, 1);
+.blog_header .blog_title {
   font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 44px;
+  color: rgba(0, 0, 0, 1);
   letter-spacing: -0.4px;
 }
 
-.articles_logo .link_detail {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: rgba(20, 23, 24, 1);
+.blog_header .more_link {
   border-bottom: 1px solid rgba(20, 23, 24, 1);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
+  color: rgba(20, 23, 24, 1);
   letter-spacing: -0.4px;
 }
+/* // Blog header */
 
-.button_link .link_detail:hover {
-  font-weight: bold;
-}
-
-.articles_list {
+/* Blog list */
+.blog_list {
   margin-top: 40px;
   width: 100%;
 }
 
-.articles_list .articles_card {
+.blog_list .blog_card {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 25px;
 }
 
-.articles_list .articles_card .card_item {
-  width: calc(33.333% - 17px);
-  box-sizing: border-box;
+.blog_list .blog_card .card_item {
+  width: calc((100% - 2 * 25px) / 3);
 }
 
-.articles_card .card_link {
-  display: block;
-  position: relative;
-  padding-top: 91.0364%;
-}
-
-
-.articles_list .articles_card .img_articles {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.articles_card .card_link .img_articles {
+.blog_card .card_link .img_blog {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
   object-fit: cover;
 }
 

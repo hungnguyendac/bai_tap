@@ -1,8 +1,8 @@
 const navTitles = document.querySelectorAll(".nav_title");
-const buttonNav = document.querySelectorAll(".is_active");
 const menuList = document.querySelectorAll(".nav_menu");
 const textPrivacy = document.querySelector(".is_changed");
 
+// Text update event when screen is small
 const updateText = () => {
   if (textPrivacy) {
     textPrivacy.textContent = window.innerWidth <= 670
@@ -11,27 +11,23 @@ const updateText = () => {
   }
 };
 
+// Call function when page loads and resizes
+window.addEventListener("load", () => {
+  updateText();
+});
+window.addEventListener("resize", () => {
+  updateText();
+});
+
+// Click mở menu + xoay icon khi màn nhỏ
 navTitles.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const menu = menuList[index];
     if (menu) {
       menu.classList.toggle("is_show");
     }
-  });
-});
-
-navTitles.forEach(title => {
-  title.addEventListener("click", () => {
     if (window.innerWidth <= 670) {
-      title.classList.toggle("rotated");
+      btn.classList.toggle("rotated");
     }
   });
-});
-
-// Gọi khi trang load
-window.addEventListener("load", () => {
-  updateText();
-});
-window.addEventListener("resize", () => {
-  updateText();
 });

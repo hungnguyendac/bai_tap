@@ -2,7 +2,7 @@
   background-color: black;
 }
 
-/* footer_top */
+/* Footer top */
 .footer_top {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,6 @@
   color: rgba(254, 254, 254, 1);
 }
 
-/* padding chỗ này */
 .social_icon {
   display: flex;
   gap: 24px;
@@ -113,9 +112,9 @@
   margin-top: 15px;
   line-height: 22px;
 }
-/* // footer_top */
+/* // Footer top */
 
-/* footer_bottom */
+/* Footer bottom */
 .footer_bottom {
   display: flex;
   justify-content: space-between;
@@ -171,6 +170,7 @@
   object-fit: cover;
   vertical-align: bottom;
 }
+/* // Footer bottom */
 
 /* Responsive */
 @media screen and (max-width: 913px) {
