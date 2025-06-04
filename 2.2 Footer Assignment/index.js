@@ -20,7 +20,6 @@ navTitles.forEach((btn, index) => {
   });
 });
 
-// Bắt sự kiện click để toggle .rotated (chỉ khi màn hình nhỏ)
 navTitles.forEach(title => {
   title.addEventListener("click", () => {
     if (window.innerWidth <= 670) {
@@ -29,16 +28,6 @@ navTitles.forEach(title => {
   });
 });
 
-// Khi màn hình to ra (> 670px), tự động gỡ .rotated
-const removeRotatedOnDesktop = () => {
-  if (window.innerWidth > 670) {
-    navTitles.forEach(title => {
-      title.classList.remove("rotated");
-    });
-  }
-};
-
-removeRotatedOnDesktop();
 // Gọi khi trang load
 window.addEventListener("load", () => {
   updateText();
