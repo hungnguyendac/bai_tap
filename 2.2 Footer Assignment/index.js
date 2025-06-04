@@ -1,43 +1,48 @@
+const navTitles = document.querySelectorAll(".nav_title");
 const buttonNav = document.querySelectorAll(".is_active");
 const menuList = document.querySelectorAll(".nav_menu");
-
 const textPrivacy = document.querySelector(".is_changed");
 
 const updateText = () => {
-    if (window.innerWidth <= 670) {
-        textPrivacy.textContent = "Terms of Use";
-    } else {
-        textPrivacy.textContent = "Terms & Conditions";
-    }
+  if (textPrivacy) {
+    textPrivacy.textContent = window.innerWidth <= 670
+      ? "Terms of Use"
+      : "Terms & Conditions";
+  }
 };
 
-// Gọi khi trang load
-window.addEventListener("load", updateText);
+navTitles.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    const menu = menuList[index];
+    if (menu) {
+      menu.classList.toggle("closed");
+    }
+  });
+});
 
-// Gọi khi resize trình duyệt
-window.addEventListener("resize", updateText);
+// Bắt sự kiện click để toggle .rotated (chỉ khi màn hình nhỏ)
+navTitles.forEach(title => {
+  title.addEventListener("click", () => {
+    if (window.innerWidth <= 670) {
+      title.classList.toggle("rotated");
+    }
+  });
+});
 
-//     btn.addEventListener("click", () => {
-//         const menu = menuList[index];
-//         if (window.innerWidth <= 600) {
-//             if (menu.style.display === "none" || menu.style.display === "") {
-//                 menu.style.display = "flex";
-//             } else {
-//                 menu.style.display = "none";
-//             }
-//         }
-//     });
-//     window.addEventListener("resize", () => {
-//         if (window.innerWidth > 600) {
-//             menuList.forEach((menu) => {
-//                 menu.style.display = "flex";
-//             });
-//         }
-//     });
-// });
-buttonNav.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        const menu = menuList[index];
-        menu.classList.toggle("closed");
+// Khi màn hình to ra (> 670px), tự động gỡ .rotated
+const removeRotatedOnDesktop = () => {
+  if (window.innerWidth > 670) {
+    navTitles.forEach(title => {
+      title.classList.remove("rotated");
     });
+  }
+};
+
+removeRotatedOnDesktop();
+// Gọi khi trang load
+window.addEventListener("load", () => {
+  updateText();
+});
+window.addEventListener("resize", () => {
+  updateText();
 });
