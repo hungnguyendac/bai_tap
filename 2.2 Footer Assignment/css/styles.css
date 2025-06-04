@@ -301,8 +301,8 @@
   }
 
   .bottom_text .privacy {
-    padding: 0;
     gap: 8px;
+    padding: 0;
   }
 
   .privacy .privacy_text {
