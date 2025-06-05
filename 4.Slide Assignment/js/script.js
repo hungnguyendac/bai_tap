@@ -2,7 +2,6 @@
 const swiper = new Swiper(".product_slides", {
   slidesPerView: 'auto',
   spaceBetween: 16,
-  freeMode: true,
   touchReleaseOnEdges: true,
   breakpoints: {
     768: {
