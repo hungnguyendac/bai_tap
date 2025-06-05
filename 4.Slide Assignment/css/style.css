@@ -190,9 +190,13 @@
     letter-spacing: -0.8px;
   }
 
+  .product {
+    position: relative;
+  }
+
   .section_header .more_link {
     position: absolute;
-    bottom: 30px;
+    bottom: -34px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 24px;
