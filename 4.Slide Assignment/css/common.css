@@ -1,0 +1,81 @@
+.more_link::before,
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/sp_icons.png");
+  background-repeat: no-repeat;
+  background-size: 226px 51px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Section header */
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section_header .section_heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: -0.4px;
+}
+
+.more_link {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  height: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  color: rgba(20, 23, 24, 1);
+  letter-spacing: -0.4px;
+  box-sizing: border-box;
+}
+
+.more_link::after,
+.more_link::before {
+  display: inline-block;
+  content: '';
+}
+
+.more_link::after {
+  position: absolute;
+  bottom: 0px;  
+  width: 100%;
+  height: 1px;
+  background-color: rgba(20, 23, 24, 1);
+}
+
+.more_link::before {
+  background-position: -100px -26px;
+}
+/* // Section header */
+
+/* Rating */
+.rating {
+  display: block;
+  width: 88px;
+  height: 16px;
+  margin-top: 12px;
+  background-image: url(../img/img_stars_bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.rating .star {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-image: url(../img/img_stars.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* // Rating */
