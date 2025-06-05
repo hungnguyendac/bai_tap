@@ -16,30 +16,30 @@
   gap: 25px;
 }
 
-.card_item {
+.blog_item {
   display: flex;
   flex-direction: column;
   width: calc((100% - 50px) / 3);
 }
 
-.card_item .card_box {
+.blog_item .blog_card_box {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.card_box:hover .img_blog {
+.blog_card_box:hover .blog_img {
   scale: 1.1;
 }
 
-.card_link {
+.blog_image_link {
   position: relative;
   overflow: hidden;
   margin: 0;
   padding-top: 91.1215%;
 }
 
-.card_link .img_blog {
+.blog_image_link .blog_img {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,7 +109,7 @@
     gap: 22px;
   }
 
-  .card_item {
+  .blog_item {
     width: 100%;
   }
 
