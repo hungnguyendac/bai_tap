@@ -182,7 +182,6 @@
 }
 
 .product_slides .swiper-scrollbar-drag {
-  width: 66% !important;
   cursor: grab;
 }
 .product_slides .swiper-scrollbar-drag:active {
