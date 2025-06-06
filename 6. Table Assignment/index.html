@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>#6.Table Assignment</title>
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section class="account">
+    <div class="inner">
+      <!-- Heading -->
+      <a class="back_link" href="#none">
+        <span class="icon icon_arrow_left"></span>
+        <span class="back_text">back</span>
+      </a>
+      <h2 class="heading">My Account</h2>
+      <!-- // Heading -->
+
+      <div class="account_inner">
+        <!-- Account sidebar -->
+        <div class="account_sidebar">
+          <div class="account_profile">
+            <div class="user">
+              <img src="./images/user_avatar.jpg" class="img_avatar" alt="User Avatar">
+              <label for="edit_img" class="btn_edit"></label>
+              <input type="file" id="edit_img" name="edit_img" accept=".png, .jpg, .jpeg" hidden>
+            </div>
+            <h3 class="user_name">Sofia Havertz</h3>
+          </div>
+          <div class="select">
+            <button class="btn_option" type="button" aria-label="Select">
+              Account
+            </button>
+            <div class="select_option">
+              <ul class="select_list">
+                <li class="select_item is_active">
+                  <a class="select_link" href="#none">Account</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Address</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Orders</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Wishlist</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- // Account sidebar -->
+
+        <!-- Order history -->
+        <div class="order_history">
+          <h3 class="order_title">Orders History</h3>
+            <table class="table">
+              <caption class="blind">
+                Order History
+              </caption>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">Number ID</th>
+                  <th scope="col">Dates</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#3456_768</td>
+                  <td>October 17, 2023</td>
+                  <td>Delivered</td>
+                  <td>$1234.00</td>
+                </tr>
+                <tr>
+                  <td>#3456_980</td>
+                  <td>October 11, 2023</td>
+                  <td>Delivered</td>
+                  <td>$345.00</td>
+                </tr>
+                <tr>
+                  <td>#3456_120</td>
+                  <td>August 24, 2023</td>
+                  <td>Delivered</td>
+                  <td>$2345.00</td>
+                </tr>
+                <tr>
+                  <td>#3456_030</td>
+                  <td>August 12, 2023</td>
+                  <td>Delivered</td>
+                  <td>$845.00</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <!-- // Order history -->
+      </div>
+    </div>
+  </section>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

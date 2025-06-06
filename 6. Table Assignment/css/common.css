@@ -1,0 +1,388 @@
+/* Icon */
+.more_link::before,
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/sp_icons.png");
+  background-repeat: no-repeat;
+  background-size: 226px 51px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.icon_search {
+  background-position: -1px -1px;
+}
+
+.icon_user {
+  background-position: -26px -1px;
+}
+
+.icon_cart {
+  background-position: -51px -1px;
+}
+
+.icon_menu {
+  background-position: -76px -1px;
+}
+
+.icon_close {
+  background-position: -101px -1px;
+}
+
+.icon_like {
+  background-position: -126px -1px;
+}
+
+.icon_instagram {
+  background-position: -151px -1px;
+}
+
+.icon_facebook {
+  background-position: -176px -1px;
+}
+
+.icon_youtube {
+  background-position: -201px -1px;
+}
+
+.icon_instagram2 {
+  background-position: -1px -26px;
+}
+
+.icon_facebook2 {
+  background-position: -26px -26px;
+}
+
+.icon_youtube2 {
+  background-position: -51px -26px;
+}
+
+.icon_arrow_right {
+  background-position: -101px -26px;
+}
+
+.icon_arrow_left {
+  background-position: -202px -26px;
+}
+
+.icon_camera {
+  background-position: -176px -24px;
+}
+/* // Icon */
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  line-height: 1px !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Section header */
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section_header .section_heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  color: #000;
+  letter-spacing: -0.4px;
+}
+
+.more_link {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  height: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #141718;
+  letter-spacing: -0.4px;
+  box-sizing: border-box;
+}
+
+.more_link::after,
+.more_link::before {
+  display: inline-block;
+  content: '';
+}
+
+.more_link::after {
+  position: absolute;
+  bottom: 0px;  
+  width: 100%;
+  height: 1px;
+  background-color: #141718;
+}
+
+.more_link::before {
+  background-position: -100px -26px;
+}
+/* // Section header */
+
+/* Rating */
+.rating {
+  display: block;
+  width: 88px;
+  height: 16px;
+  background-image: url(../img/img_stars_bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.rating .star {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-image: url(../img/img_stars.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* // Rating */
+
+/* Heading */
+.back_link {
+  display: none;
+}
+
+.heading {
+  padding: 80px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: -1px;
+  color: #000;
+}
+/* // Heading */
+
+/* Account sidebar */
+.account_inner {
+  display: flex;
+  gap: 7px;
+}
+
+.account_sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  min-width: 230px;
+  max-height: 418px;
+  padding: 40px 16px;
+  background-color: #F3F5F7;
+}
+
+.account_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.user {
+  position: relative;
+}
+
+.user .img_avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user .btn_edit {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  background-color: #141718;
+  box-sizing: border-box;
+}
+
+.user .btn_edit::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/sp_icons.png);
+  background-repeat: no-repeat;
+  background-size: 226px 51px;
+  background-position: -180px -27px;
+  translate: -50% -50%;
+  cursor: pointer;
+  content: '';
+}
+
+.account_profile .user_name {
+  margin-top: 2px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.select .btn_option {
+  display: none;
+}
+
+.select_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.select_list .select_item {
+  padding: 8px 0;
+}
+
+.select_list .is_active {
+  border-bottom: 1px solid #141718;
+}
+
+.select_list .is_active .select_link {
+  color: #141718;
+  font-weight: bold;
+}
+
+.select_item .select_link {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #6C7275;
+}
+
+@media screen and (max-width: 768px) {
+  .back_link {
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: -7px;
+    font-size: 0;
+  }
+
+  .back_link .back_text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #605F5F;
+  }
+
+  .heading {
+    margin-right: 14px;
+    padding: 40px 0;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+  }
+
+  .account_inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .account_sidebar {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .select {
+    position: relative;
+  }
+  
+  .select .btn_option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    margin-top: 1px;
+    padding: 8px 8px 8px 13px;
+    border: 2px solid #6C7275;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .select .btn_option::after {
+    display: inline-block;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/sp_icons.png);
+    background-repeat: no-repeat;
+    background-size: 251px 51px;
+    background-position: -226px -1px;
+    vertical-align: top;
+    transition: rotate 0.25s ease;
+    box-sizing: border-box;
+    content: '';
+  }
+  
+  .select .btn_option.is_active::after {
+    rotate: 180deg;
+  }
+  
+  .select .select_option {
+    overflow: hidden;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    max-height: 0;
+    padding: 0 8px;
+    border: 2px solid #f3f5f7;
+    border-radius: 12px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    box-sizing: border-box;
+    z-index: 99;
+  }
+  
+  .select_option.is_show {
+    max-height: 290px; 
+    padding: 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .select_list .select_item:hover {
+    border-radius: 8px;
+    background-color: #F3F5F7;
+    border-bottom: none;
+  }
+  
+  .select_link {
+    padding-left: 8px;
+  }
+  
+  .select_list .is_active {
+    border-bottom: none;
+  }
+  
+  .select_list .select_item:hover .select_link {
+    color: #141718;
+    font-weight: bold;
+  }
+}
+/* // Account sidebar */

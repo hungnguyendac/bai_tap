@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#5.Form Assignment</title>
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section class="account">
+    <div class="inner">
+      <!-- Heading -->
+      <a class="back_link" href="#none">
+        <span class="icon icon_arrow_left"></span>
+        <span class="back_text">back</span>
+      </a>
+      <h2 class="heading">My Account</h2>
+      <!-- // Heading -->
+
+      <div class="account_inner">
+        <!-- Account sidebar -->
+        <div class="account_sidebar">
+          <div class="account_profile">
+            <div class="user">
+              <img src="./images/user_avatar.jpg" class="img_avatar" alt="User Avatar">
+              <label for="edit_img" class="btn_edit"></label>
+              <input type="file" id="edit_img" name="edit_img" accept=".png, .jpg, .jpeg" hidden>
+            </div>
+            <h3 class="user_name">Sofia Havertz</h3>
+          </div>
+          <div class="select">
+            <button class="btn_option" type="button" aria-label="Select">
+              Account
+            </button>
+            <div class="select_option">
+              <ul class="select_list">
+                <li class="select_item is_active">
+                  <a class="select_link" href="#none">Account</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Address</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Orders</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Wishlist</a>
+                </li>
+                <li class="select_item">
+                  <a class="select_link" href="#none">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- // Account sidebar -->
+
+        <!-- Form account -->
+        <form class="form_account">
+          <div class="form_group">
+            <div class="form_detail">
+              <h3 class="account_title">Account Details</h3>
+              <div class="form_item">
+                <label class="label" for="first name">FIRST NAME *</label>
+                <input class="input" type="text" id="fname" name="first_name" placeholder="First name">
+              </div>
+              <div class="form_item">
+                <label class="label" for="last name">LAST NAME *</label>
+                <input class="input" type="text" id="lname" name="last_name" placeholder="Last name">
+              </div>
+              <div class="form_item">
+                <label class="label" for="display name">DISPLAY NAME *</label>
+                <input class="input" type="text" id="dplay" name="display_name" placeholder="Display name">
+                <p class="form_item_text">This will be how your name will be displayed in the account section and in reviews</p>
+              </div>
+              <div class="form_item">
+                <label class="label" for="email">EMAIL *</label>
+                <input class="input" type="email" id="email" name="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="form_password">
+              <h3 class="account_title">Password</h3>
+              <div class="form_item">
+                <label class="label" for="old password">OLD PASSWORD</label>
+                <input class="input" type="password" id="oldpass" name="Old_password" placeholder="Old password">
+              </div>
+              <div class="form_item">
+                <label class="label" for="new password">NEW PASSWORD</label>
+                <input class="input" type="password" id="newpass" name="New_password" placeholder="New password">
+              </div>
+              <div class="form_item">
+                <label class="label" for="repeat password">REPEAT NEW PASSWORD</label>
+                <input class="input" type="password" id="repeatpass" name="Repeat_password" placeholder="Repeat new password">
+              </div>
+              <div class="form_item">
+                <button class="btn_save" type="button">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- // Form account -->
+      </div>
+    </div>
+  </section>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
